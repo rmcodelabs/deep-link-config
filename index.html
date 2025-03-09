@@ -13,7 +13,7 @@
             color: #333;
         }
         header {
-            background-color: #4CAF50;
+            background-color: #C60468; /* Main color */
             color: white;
             padding: 20px;
             text-align: center;
@@ -23,51 +23,66 @@
             font-size: 2.5em;
         }
         h2 {
-            color: #4CAF50;
+            color: #C60468; /* Main color */
             margin-top: 20px;
+            text-align: center;
         }
         p {
             line-height: 1.6;
             margin: 10px 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
         }
         ul {
             list-style-type: none;
             padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
         }
         li {
             background: #fff;
-            margin: 10px 0;
-            padding: 15px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: calc(30% - 40px); /* Adjust width for three columns */
+            text-align: left;
         }
         .screenshot-container {
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
             margin: 20px 0;
         }
         .screenshot {
             max-width: 30%;
             height: auto;
-            border: 2px solid #4CAF50;
-            border-radius: 5px;
+            border: 2px solid #C60468; /* Main color */
+            border-radius: 10px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            margin: 0 10px;
         }
         footer {
             text-align: center;
             padding: 20px;
-            background-color: #4CAF50;
+            background-color: #C60468; /* Main color */
             color: white;
             position: relative;
             bottom: 0;
             width: 100%;
         }
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 2em;
+        @media (max-width: 900px) {
+            li {
+                width: calc(45% - 40px); /* Adjust for two columns */
             }
-            h2 {
-                font-size: 1.5em;
+        }
+        @media (max-width: 600px) {
+            li {
+                width: 90%; /* Stack vertically on small screens */
             }
             .screenshot {
                 max-width: 90%; /* Adjust for smaller screens */
@@ -86,7 +101,7 @@
         <p>Your perfect app for beautiful wedding invitations!</p>
     </header>
 
-    <main style="padding: 20px;">
+    <div class="container">
         <p>Designed for simplicity and ease of use, our app allows you to quickly generate elegant invitations that you can share with your loved ones.</p>
 
         <h2>Key Features:</h2>
@@ -99,21 +114,20 @@
         </ul>
 
         <h2>Why Choose Invitation For You?</h2>
-        <p>Planning a wedding can be stressful, but with Invitation For You, you can simplify the process of sending out invitations. Focus on celebrating your love while we take care of the invitation details.</p>
+        <p>Planning a wedding can be stressful, but with Invitation For You, you can simplify the process of creating and sharing invitations. Our app is designed to take the hassle out of wedding planning, allowing you to focus on what truly matters—celebrating your special day with family and friends. 
 
-        <p>Download Invitation For You today and start sharing your beautiful wedding invitation with your loved ones!</p>
+        <h2>Get Started Today!</h2>
+        <p>Download the app now and start creating your beautiful wedding invitations. It's free to use, and you can customize your invitations to match your wedding theme perfectly.</p>
 
-        <h2>Screenshots:</h2>
         <div class="screenshot-container">
-            <img src="screen2.jpg" alt="Screenshot 1" class="screenshot">
-            <img src="screen1.jpg" alt="Screenshot 2" class="screenshot">
-            <img src="screen3.jpg" alt="Screenshot 3" class="screenshot">
+            <img src="scree2.jpg" alt="Screenshot of the app" class="screenshot">
+            <img src="screen1.jpg" alt="Screenshot of the app" class="screenshot">
+            <img src="screen3.jpg" alt="Screenshot of the app" class="screenshot">
         </div>
-    </main>
+    </div>
 
     <footer>
-        <p>&copy; 2023 Invitation For You. All rights reserved.</p>
+        <p>&copy; 2025 Invitation For You. All rights reserved.</p>
     </footer>
-
 </body>
 </html>
