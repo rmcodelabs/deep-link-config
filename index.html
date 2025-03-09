@@ -41,10 +41,14 @@
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-        .screenshot {
-            max-width: 100%;
-            height: auto;
+        .screenshot-container {
+            display: flex;
+            justify-content: space-around;
             margin: 20px 0;
+        }
+        .screenshot {
+            max-width: 30%;
+            height: auto;
             border: 2px solid #4CAF50;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -64,6 +68,13 @@
             }
             h2 {
                 font-size: 1.5em;
+            }
+            .screenshot {
+                max-width: 90%; /* Adjust for smaller screens */
+            }
+            .screenshot-container {
+                flex-direction: column; /* Stack images vertically on small screens */
+                align-items: center;
             }
         }
     </style>
@@ -93,9 +104,11 @@
         <p>Download Invitation For You today and start sharing your beautiful wedding invitation with your loved ones!</p>
 
         <h2>Screenshots:</h2>
-        <img src="screen2.jpg" alt="Screenshot 1" class="screenshot">
-        <img src="screen1.jpg" alt="Screenshot 2" class="screenshot">
-        <img src="screen3.jpg" alt="Screenshot 3" class="screenshot">
+        <div class="screenshot-container">
+            <img src="screen2.jpg" alt="Screenshot 1" class="screenshot">
+            <img src="screen1.jpg" alt="Screenshot 2" class="screenshot">
+            <img src="screen3.jpg" alt="Screenshot 3" class="screenshot">
+        </div>
     </main>
 
     <footer>
