@@ -194,7 +194,7 @@
         <div class="cta">
             <h2>Start Creating Your Invitation Today!</h2>
             <p>Download now and make your wedding invitations unique and unforgettable.</p>
-            <a class="cta-button" onclick="openInvitation()">Open Invitation</a>
+            <a class="cta-button" onclick="openInvitation()">Download App</a>
         </div>
     </div>
 
@@ -209,6 +209,20 @@
             window.location.href = playStoreUrl;
         }
     </script>
+    <script>
+    window.addEventListener('error', (event) => {
+        if (event.target.tagName === 'IFRAME' || event.target.tagName === 'IMG' || event.target.tagName === 'SCRIPT' || event.target.tagName === 'LINK') {
+            // Ignore other resource errors, only check document-level errors
+            return;
+        }
+
+        // Redirect to download page on 404
+        if (event.target instanceof HTMLDocument) {
+            window.location.href = "download.html";
+        }
+    });
+</script>
+    
 
 </body>
 </html>
