@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Invitation For You</title>
     <style>
         /* Global Styling */
@@ -112,6 +113,7 @@
             font-weight: bold;
             border-radius: 5px;
             transition: background 0.3s, color 0.3s;
+            cursor: pointer;
         }
         .cta-button:hover {
             background: #ff3f8c;
@@ -192,13 +194,29 @@
         <div class="cta">
             <h2>Start Creating Your Invitation Today!</h2>
             <p>Download now and make your wedding invitations unique and unforgettable.</p>
-            <a href="#" class="cta-button">Download Now</a>
+            <a href="javascript:void(0);" class="cta-button" onclick="openInvitation()">Open Invitation</a>
         </div>
     </div>
 
     <footer>
         <p>&copy; 2025 Invitation For You. All rights reserved.</p>
     </footer>
+
+    <script>
+        function openInvitation() {
+            const appPackage = "com.rmcodelabs.invitationforyou";
+            const invitationUrl = "invitationforyou://invitation";
+            const playStoreUrl = https://play.google.com/store/apps/details?id=${appPackage};
+
+            // Try opening the app
+            window.location.href = invitationUrl;
+
+            // If app not found, redirect to Play Store after 1 second
+            setTimeout(() => {
+                window.location.href = playStoreUrl;
+            }, 1000);
+        }
+    </script>
 
 </body>
 </html>
