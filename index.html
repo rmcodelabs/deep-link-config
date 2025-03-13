@@ -209,19 +209,7 @@
             window.location.href = playStoreUrl;
         }
     </script>
-    <script>
-    window.addEventListener('error', (event) => {
-        if (event.target.tagName === 'IFRAME' || event.target.tagName === 'IMG' || event.target.tagName === 'SCRIPT' || event.target.tagName === 'LINK') {
-            // Ignore other resource errors, only check document-level errors
-            return;
-        }
-
-        // Redirect to download page on 404
-        if (event.target instanceof HTMLDocument) {
-            window.location.href = "download.html";
-        }
-    });
-</script>
+   
     
 
 </body>
