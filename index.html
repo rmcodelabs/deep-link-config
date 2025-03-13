@@ -206,17 +206,7 @@
         function openInvitation() {
             const appUrl = "invitationforyou://invitation";
             const playStoreUrl = "https://play.google.com/store/apps/details?id=com.rmcodelabs.invitationforyou";
-
-            // Create an invisible iframe to trigger the app open
-            const iframe = document.createElement('iframe');
-            iframe.style.display = 'none';
-            iframe.src = appUrl;
-            document.body.appendChild(iframe);
-
-            // Set timeout to handle fallback to Play Store if app doesn't open
-            setTimeout(() => {
-                window.location.href = playStoreUrl;
-            }, 1500);
+            window.location.href = playStoreUrl;
         }
     </script>
 
