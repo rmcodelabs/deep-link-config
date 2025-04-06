@@ -6,15 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Invitation For You</title>
     <script>
+    (function () {
         const path = window.location.pathname.replace(/^\/+/, '');
-        if (path && path !== 'index.html') {
-            const intentUrl = `intent://invitation/${path}#Intent;scheme=https;package=com.android.chrome;end;`;
-            window.location.replace(intentUrl);
-            setTimeout(() => {
-                window.location.href = "https://play.google.com/store/apps/details?id=com.rmcodelabs.invitationforyou";
-            }, 2000);
-        }
-    </script>
+        const deepLink = `intent://${path}#Intent;scheme=https;package=com.rmcodelabs.invitationforyou;end`;
+        const fallback = "https://play.google.com/store/apps/details?id=com.rmcodelabs.invitationforyou";
+
+        // Try to open app using intent (will work in most in-app browsers)
+        window.location.replace(deepLink);
+
+        // Fallback to Play Store after 2 seconds
+        setTimeout(() => {
+            window.location.href = fallback;
+        }, 2000);
+    })();
+</script>
+
     <style>
         /* Global Styling */
         * {
